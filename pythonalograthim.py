@@ -1,3 +1,4 @@
+# 算法图解第一章  二分查找（有序）
 def binary_search(list,item):
     low = 0;
     high = len(list) - 1
