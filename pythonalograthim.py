@@ -18,6 +18,23 @@
 # my_list = [1,3,5,7,9]
 # print binary_search(my_list,3)
 # print binary_search(my_list,-1)
+# 第二章 选择排序
+def findSmallest(arr):
+    smallest = arr[0]
+    smallest_index = 0
+    for i in range(1,len(arr)):
+        if arr[i] < smallest:
+            smallest = arr[i]
+            smallest_index = i
+    return smallest_index
+
+def selecttionSort(arr):
+    newArr = []
+    for i in range(len(arr)):
+        smallest = findSmallest(arr)
+        newArr.append(arr.pop(smallest))
+    return newArr
+print selecttionSort([5,3,6,2,10])
 # 第三章 递归
 # def countdown(i):
 #     print i
@@ -27,9 +44,10 @@
 #         countdown(i-1)
 # countdown(6)
 # 阶乘
-def fact(x):
-    if x == 1:
-        return 1
-    else:
-        return x*fact(x-1)
-print fact(3)
+# def fact(x):
+#     if x == 1:
+#         return 1
+#     else:
+#         return x*fact(x-1)
+# print fact(3)
+# 第四章 快速排序
