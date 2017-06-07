@@ -19,22 +19,22 @@
 # print binary_search(my_list,3)
 # print binary_search(my_list,-1)
 # 第二章 选择排序
-def findSmallest(arr):
-    smallest = arr[0]
-    smallest_index = 0
-    for i in range(1,len(arr)):
-        if arr[i] < smallest:
-            smallest = arr[i]
-            smallest_index = i
-    return smallest_index
+# def findSmallest(arr):
+#     smallest = arr[0]
+#     smallest_index = 0
+#     for i in range(1,len(arr)):
+#         if arr[i] < smallest:
+#             smallest = arr[i]
+#             smallest_index = i
+#     return smallest_index
 
-def selecttionSort(arr):
-    newArr = []
-    for i in range(len(arr)):
-        smallest = findSmallest(arr)
-        newArr.append(arr.pop(smallest))
-    return newArr
-print selecttionSort([5,3,6,2,10])
+# def selecttionSort(arr):
+#     newArr = []
+#     for i in range(len(arr)):
+#         smallest = findSmallest(arr)
+#         newArr.append(arr.pop(smallest))
+#     return newArr
+# print selecttionSort([5,3,6,2,10])
 # 第三章 递归
 # def countdown(i):
 #     print i
@@ -51,3 +51,14 @@ print selecttionSort([5,3,6,2,10])
 #         return x*fact(x-1)
 # print fact(3)
 # 第四章 快速排序
+def sum(arr):
+    total = 0
+    for x in arr:
+        total +=x
+    return total
+print sum([1,2,3,4])
+# def sum(arr):
+#     if list ==[]:
+#         return 0
+#     return list[0] + sum(list[1:])
+# print sum([4,5,7,8])
