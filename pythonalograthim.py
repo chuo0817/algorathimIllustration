@@ -51,14 +51,14 @@
 #         return x*fact(x-1)
 # print fact(3)
 # 第四章 快速排序
-def sum(arr):
-    total = 0
-    for x in arr:
-        total +=x
-    return total
-print sum([1,2,3,4])
 # def sum(arr):
-#     if list ==[]:
-#         return 0
-#     return list[0] + sum(list[1:])
-# print sum([4,5,7,8])
+#     total = 0
+#     for x in arr:
+#         total +=x
+#     return total
+# print sum([1,2,3,4])
+def sum(list):
+    if list ==[]:
+        return 0
+    return list[0] + sum(list[1:])
+print sum([4,5,7,8])

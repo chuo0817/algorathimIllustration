@@ -5,7 +5,6 @@
     <title>算法图解js练习</title>
   </head>
   <body>
-
   </body>
 </html>
 <script>
@@ -33,6 +32,7 @@ function xuanzepaixu(arr) {
     var min/*最小项的索引*/, tmp;
     for (var out = 0; out < arr.length - 1; out++) {//比较的次数是length-1
         min = out;
+        // console.log(min)
         for (var inner = out + 1; inner < arr.length; inner++) {//这里是a.length，不是a.lenght-1，因为后者会导致右数第2项没法参与排序。
             if (arr[inner] < arr[min]) {
                 min = inner;
@@ -43,7 +43,7 @@ function xuanzepaixu(arr) {
             arr[min] = tmp;
         }
     }
-    alert(arr);
+    // alert(arr);
 };
 
 </script>
