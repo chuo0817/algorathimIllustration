@@ -62,4 +62,22 @@ function sum(arr) {
   }
   return total
 }
+// 快速排序
+function quicksort(array) {
+  if (array.length < 2) {
+    return array    
+  }else{
+    var pivot = array[0] //基线条件
+    for(var i = 0;i<array.length;i++){
+      if(i<pivot){
+        var less=i
+        return less
+      }else{
+        var greater = i
+        return greater
+      }
+    }
+    return less+pivot+greater
+  }  
+}
 </script>

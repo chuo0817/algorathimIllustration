@@ -69,7 +69,16 @@ def quicksort(array):
         return array
     else:
         pivot = array[0]
-        less = [i for i in array[1:] if i <=pivot ]
-        greater = [i for i in array[1:] if i <=pivot ]
+        less = [i for i in array[1:]  if i <=pivot ]
+        greater = [i for i in array[1:] if i > pivot ]
         return quicksort(less) + [pivot] + quicksort(greater)
 print quicksort([10,5,2,3])
+# def qsort(list):
+#     if not list:
+#         return []
+#     else:
+#         pivot = list[0]
+#         less = [x for x in list     if x <  pivot]
+#         more = [x for x in list[1:] if x >= pivot]
+#         return qsort(less) + [pivot] + qsort(more)
+# print qsort([2,3,75,34,1,9])
