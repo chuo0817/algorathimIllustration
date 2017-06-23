@@ -83,7 +83,17 @@
 #         return qsort(less) + [pivot] + qsort(more)
 # print qsort([2,3,75,34,1,9])
 # 第五章
-book = dict()
-book["apple"] = 0.67
-book["milk"] = 1.49
-print book["milk"]
+# book = dict()
+# book["apple"] = 0.67
+# book["milk"] = 1.49
+# print book["milk"]
+# 散列表防止重复
+voted = {}
+def check_voter(name):
+    if voted.get(name):
+        print "kick them out!"
+    else:
+        voted[name]=True
+        print "let them vote!"
+check_voter("mike")
+check_voter("mike")
