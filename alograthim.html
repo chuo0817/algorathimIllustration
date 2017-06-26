@@ -68,16 +68,16 @@ function quicksort(array) {
     return array    
   }else{
     var pivot = array[0] //基线条件
-    for(var i = 0;i<array.length;i++){
-      if(i<pivot){
-        var less=i
-        return less
+    var less=[];
+    var greater=[];
+    for (var i =0;i<array.length;i++){
+      if(array[i]<pivot){
+        less.push(array[i])
       }else{
-        var greater = i
-        return greater
+        greater.push(array[i])
       }
     }
-    return less+pivot+greater
+    return quicksort(less).concat([pivot],quicksort(greater))
   }  
 }
 </script>
