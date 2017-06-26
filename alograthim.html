@@ -9,41 +9,41 @@
 </html>
 <script>
 // javascript算法练习 第一章 二分查找
-  function binary_search(target,arr) {
-    var start = 0;
-    var end = arr.length - 1;
+function binary_search(target,arr) {
+  var start = 0;
+  var end = arr.length - 1;
 // parseInt舍弃小数部分
-    while (start <= end) {
-      var mid = parseInt(start+(end-start)/2);
-      if (target == arr[mid]){
-        return mid;
-      }else if (target > arr[mid]) {
-        start = mid + 1;
-      }else {
-        // 如果在数组中没有这个数，则返回-1
-        end = mid - 1;
-      }
+  while (start <= end) {
+    var mid = parseInt(start+(end-start)/2);
+    if (target == arr[mid]){
+      return mid;
+    }else if (target > arr[mid]) {
+      start = mid + 1;
+    }else {
+      // 如果在数组中没有这个数，则返回-1
+      end = mid - 1;
     }
-    return -1;
   }
+  return -1;
+}
 
 //第二章 选择排序
 function xuanzepaixu(arr) {
-    var min/*最小项的索引*/, tmp;
-    for (var out = 0; out < arr.length - 1; out++) {//比较的次数是length-1
-        min = out;
-        // console.log(min)
-        for (var inner = out + 1; inner < arr.length; inner++) {//这里是a.length，不是a.lenght-1，因为后者会导致右数第2项没法参与排序。
-            if (arr[inner] < arr[min]) {
-                min = inner;
-            }
-            //将最小的项移动到左侧
-            tmp = arr[out];
-            arr[out] = arr[min]
-            arr[min] = tmp;
-        }
-    }
-    // alert(arr);
+  var min/*最小项的索引*/, tmp;
+  for (var out = 0; out < arr.length - 1; out++) {//比较的次数是length-1
+      min = out;
+      // console.log(min)
+      for (var inner = out + 1; inner < arr.length; inner++) {//这里是a.length，不是a.lenght-1，因为后者会导致右数第2项没法参与排序。
+          if (arr[inner] < arr[min]) {
+              min = inner;
+          }
+          //将最小的项移动到左侧
+          tmp = arr[out];
+          arr[out] = arr[min]
+          arr[min] = tmp;
+      }
+  }
+  // alert(arr);
 };
 // 第三章 递归
 // 阶乘
