@@ -67,16 +67,18 @@ function quicksort(array) {
   if (array.length < 2) {
     return array    
   } else {
-    // var pivot = array[0] //基线条件
-    var pivotIndex = Math.floor(array.length / 2);
-　　 var pivot = array.splice(pivotIndex, 1)[0];
+    var pivot = array[0] //基线条件
+//     var pivotIndex = Math.floor(array.length / 2);
+// 　　 var pivot = array.splice(pivotIndex, 1)[0];
     var less=[];
     var greater=[];
-    for (var i =0;i<array.length;i++) {
-      if (array[i]<pivot) {
-        less.push(array[i])
+// 如果基线条件是数组的第一个，每次就要从第二个开始截取
+    var arr = array.slice(1)
+    for (var i =0;i<arr.length;i++) {
+      if (arr[i]<pivot) {
+        less.push(arr[i])
       } else {
-        greater.push(array[i])
+        greater.push(arr[i])
       }
     }
     return quicksort(less).concat([pivot],quicksort(greater))
