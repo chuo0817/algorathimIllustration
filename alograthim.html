@@ -66,14 +66,16 @@ function sum(arr) {
 function quicksort(array) {
   if (array.length < 2) {
     return array    
-  }else{
-    var pivot = array[0] //基线条件
+  } else {
+    // var pivot = array[0] //基线条件
+    var pivotIndex = Math.floor(array.length / 2);
+　　 var pivot = array.splice(pivotIndex, 1)[0];
     var less=[];
     var greater=[];
-    for (var i =0;i<array.length;i++){
-      if(array[i]<pivot){
+    for (var i =0;i<array.length;i++) {
+      if (array[i]<pivot) {
         less.push(array[i])
-      }else{
+      } else {
         greater.push(array[i])
       }
     }
